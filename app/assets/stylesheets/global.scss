@@ -1,0 +1,15 @@
+@import 'custom-var';
+@import 'mixin';
+
+body {
+
+  .pusher.content {
+    min-height: 100vh;
+    //background: url('home_background.jpg') no-repeat center;
+    background-size: cover;
+  }
+}
+
+main {
+  padding: 40px 15px;
+}

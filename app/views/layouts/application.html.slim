@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title
+      | my_app
+    = stylesheet_link_tag    'application', media: 'all'
+    /, 'data-turbolinks-track' => 'reload'
+    = javascript_include_tag 'application'
+    /, 'data-turbolinks-track': 'reload'
+  body
+    .ui.sidebar.inverted.vertical.menu
+      = link_to '#', class: 'item'
+        | some categories
+      = link_to '#', class: 'item'
+        | some categories
+      = link_to '#', class: 'item'
+        | some categories
+      = link_to '#', class: 'item'
+        | some categories
+
+    = render partial: 'layouts/header'
+
+    main.pusher.content
+      = yield
+    footer

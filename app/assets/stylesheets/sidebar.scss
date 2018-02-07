@@ -1,0 +1,27 @@
+@import 'mixin';
+
+.ui.sidebar.menu {
+  .item {
+    font-size: 12px;
+    line-height: 3;
+    position: relative;
+    text-transform: uppercase;
+
+    &:after {
+      @include transition(all .5s);
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 0;
+      left: 0;
+      bottom: 0;
+    }
+
+    &:hover {
+      &:after {
+        background: #fff;
+        width: 100%;
+      }
+    }
+  }
+}

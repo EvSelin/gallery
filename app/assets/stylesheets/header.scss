@@ -1,0 +1,72 @@
+@import 'custom-var';
+@import 'mixin';
+
+header {
+  color: #fff;
+  padding: 0 15px;
+  background: $main-black-color !important; //overwrite semantic-ui styles
+  @include align-items(center);
+  @include justify-content(space-between);
+
+  &.ui.menu::after {
+    display: none;
+  }
+
+  .nav-wrapper {
+    @include flex-box;
+  }
+
+  i.icon {
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .logo {
+    text-transform: uppercase;
+    position: relative;
+    font-weight: bold;
+    font-size: 12px;
+    color: #fff;
+    margin-left: 10px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      @include transition(all .3s);
+    }
+
+    &:hover {
+
+      &:after {
+        background: #fff;
+        width: 100%;
+      }
+    }
+  }
+
+  .social-links {
+    a {
+      color: #fff;
+      font-size: 22px;
+
+      &.colored i {
+
+        &.youtube {
+          color: #e93f34;
+        }
+
+        &.vk {
+          color: #72a4db;
+        }
+
+        &.instagram {
+          color: #f5ae33;
+        }
+      }
+    }
+  }
+}

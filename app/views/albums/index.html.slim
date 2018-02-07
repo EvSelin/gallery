@@ -1,0 +1,10 @@
+- @albums.each_slice(3) do |sliced_album|
+  .albums-wrapper
+    - sliced_album.each do |album|
+      .album
+        = link_to '#', class: 'album-cover'
+          = image_tag album.cover
+          = image_tag album.cover
+          = image_tag album.cover
+        .album-title
+          = album.title
